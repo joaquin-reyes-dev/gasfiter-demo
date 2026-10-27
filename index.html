@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gasfitería Rápida | Gasfíter a domicilio, urgencias 24 horas</title>
+<meta name="description" content="Gasfíter a domicilio en tu comuna. Fugas, destapes, calefont e instalaciones. Presupuesto antes de empezar y garantía por escrito.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--ink:#0A2540;
+--ink2:#1B3F66;
+--water:#14A6C9;
+--paper:#F4F7F9;
+--line:#D5DEE5;
+--alert:#E5372E;
+--text:#17212B;
+--muted:#51606E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Public Sans",Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:"Archivo",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+
+.top{background:var(--ink);color:#fff;border-bottom:1px solid var(--ink2)}
+.top .in{max-width:1080px;margin:auto;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.marca{font-family:"Archivo",Arial,sans-serif;font-weight:800;font-size:1.2rem;text-decoration:none}
+.marca b{color:var(--water)}
+.top .fono{text-decoration:none;font-weight:600;display:none}
+.top .fono span{color:#8FB3CC;font-weight:400;margin-right:8px}
+
+.hero{background:var(--ink);color:#fff;overflow:hidden}
+.hero .in{max-width:1080px;margin:auto;padding:56px 22px 64px;display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7vw,4.4rem);font-weight:800;letter-spacing:-.02em;max-width:12ch}
+.hero p.sub{font-size:1.15rem;color:#C9D8E4;max-width:34em;margin:20px 0 28px}
+.botones{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:6px;font-weight:600;font-size:1.05rem;text-decoration:none;border:2px solid transparent;transition:transform .15s}
+.btn:active{transform:scale(.98)}
+.btn.wsp{background:#25D366;color:#06210F}
+.btn.wsp:hover{background:#3BE07A}
+.btn.fono{background:transparent;color:#fff;border-color:#4C7399}
+.btn.fono:hover{border-color:#fff}
+.btn svg{width:22px;height:22px;flex:none}
+.garantias{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:10px}
+.garantias li{display:flex;gap:10px;align-items:center;color:#DCE7F0}
+.garantias svg{width:20px;height:20px;flex:none;color:var(--water)}
+.arte{max-width:420px;width:100%;justify-self:center}
+.gota{animation:caer 2.6s ease-in infinite;transform-origin:330px 310px}
+@keyframes caer{0%{transform:translateY(-6px);opacity:0}15%{opacity:1}80%{transform:translateY(34px);opacity:1}100%{transform:translateY(40px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.gota{animation:none}}
+
+section{padding:68px 22px}
+.cont{max-width:1080px;margin:auto}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
+.intro{color:var(--muted);max-width:36em;margin:0 0 34px}
+
+.servicios{background:var(--paper)}
+.fila{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:20px 0;border-top:1px solid var(--line);align-items:baseline}
+.fila:last-child{border-bottom:1px solid var(--line)}
+.fila h3{font-size:1.25rem;font-weight:700}
+.fila p{grid-column:1;margin:0;color:var(--muted)}
+.fila .precio{grid-row:1;grid-column:2;font-family:"Archivo",Arial,sans-serif;font-weight:700;color:var(--ink);white-space:nowrap}
+.nota{margin:18px 0 0;color:var(--muted);font-size:.95rem}
+
+.pasos{list-style:none;margin:0;padding:0 0 0 34px;border-left:8px solid var(--water);max-width:620px}
+.pasos li{position:relative;padding:0 0 34px 28px}
+.pasos li:last-child{padding-bottom:0}
+.pasos li::before{content:attr(data-n);position:absolute;left:-63px;top:-2px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:4px solid #fff;box-shadow:0 0 0 3px var(--water);display:grid;place-items:center;font-family:"Archivo",Arial,sans-serif;font-weight:800}
+.pasos h3{font-size:1.3rem;margin-bottom:4px}
+.pasos p{margin:0;color:var(--muted)}
+
+.opiniones{background:var(--ink);color:#fff}
+.opiniones h2{color:#fff}
+.citas{display:grid;gap:34px;margin-top:34px}
+blockquote{margin:0;padding-left:20px;border-left:4px solid var(--water)}
+blockquote p{margin:0 0 10px;font-family:"Archivo",Arial,sans-serif;font-weight:700;font-size:1.35rem;line-height:1.3}
+blockquote footer{color:#9DB7CC;font-size:.95rem}
+.estrellas{color:#FFC043;letter-spacing:2px;margin-bottom:8px;font-size:1.05rem}
+
+.zonas ul{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.zonas li{border:1.5px solid var(--ink);padding:8px 16px;border-radius:999px;font-weight:600}
+
+.faq{background:var(--paper)}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:"Archivo",Arial,sans-serif;font-weight:700;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--water)}
+details[open] summary::after{content:"\2212"}
+details p{margin:12px 0 0;color:var(--muted);max-width:42em}
+
+.final{background:var(--water);color:var(--ink);text-align:left}
+.final .cont{display:grid;gap:22px;align-items:center}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);max-width:14ch}
+.final p{margin:0;font-size:1.1rem;max-width:30em}
+.final .btn.wsp{background:var(--ink);color:#fff;justify-self:start}
+.final .btn.wsp:hover{background:#12355C}
+
+footer.pie{background:var(--ink);color:#9DB7CC;padding:34px 22px 100px;font-size:.95rem}
+footer.pie .cont{display:grid;gap:6px}
+footer.pie strong{color:#fff;font-family:"Archivo",Arial,sans-serif;font-size:1.1rem}
+
+.barra{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
+.barra a{padding:16px 10px;text-align:center;font-weight:700;text-decoration:none;color:#fff}
+.barra .b1{background:#25D366;color:#06210F}
+.barra .b2{background:var(--ink)}
+
+@media (min-width:760px){
+.top .fono{display:block}
+.hero .in{grid-template-columns:1.15fr .85fr;padding:80px 22px 90px}
+.citas{grid-template-columns:repeat(3,1fr)}
+.final .cont{grid-template-columns:1fr auto}
+.final .btn.wsp{justify-self:end}
+.barra{display:none}
+footer.pie{padding-bottom:34px}
+.fila{grid-template-columns:1fr 2fr auto}
+.fila p{grid-column:2}
+.fila .precio{grid-column:3}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+<div class="in">
+<a class="marca" href="#">Gasfitería <b>Rápida</b></a>
+<a class="fono" href="tel:+56912345678"><span>Urgencias</span>+56 9 1234 5678</a>
+</div>
+</header>
+
+<main>
+<div class="hero">
+<div class="in">
+<div>
+<h1>Si hay agua donde no debe, llegamos hoy.</h1>
+<p class="sub">Gasfíter a domicilio en Tu Comuna y alrededores. Te decimos cuánto cuesta antes de tocar nada.</p>
+<div class="botones">
+<a class="btn wsp" href="https://wa.me/56912345678?text=Hola,%20necesito%20un%20gasfiter">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 8L3 21l1.100-4.600A9 9 0 1 1 21 12z"/></svg>
+Escríbenos por WhatsApp
+</a>
+<a class="btn fono" href="tel:+56912345678">Llamar ahora</a>
+</div>
+<ul class="garantias">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Urgencias las 24 horas, todos los días</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Presupuesto antes de empezar</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Garantía por escrito en cada trabajo</li>
+</ul>
+</div>
+
+<svg class="arte" viewBox="0 0 420 360" role="img" aria-label="Cañería con válvula y una gota de agua">
+<rect x="0" y="250" width="420" height="44" fill="#1B3F66"/>
+<rect x="0" y="256" width="420" height="6" fill="#2B5A8E"/>
+<rect x="140" y="238" width="16" height="68" rx="3" fill="#2B5A8E"/>
+<rect x="264" y="238" width="16" height="68" rx="3" fill="#2B5A8E"/>
+<rect x="322" y="244" width="16" height="56" rx="3" fill="#E5372E"/>
+<rect x="190" y="124" width="40" height="126" fill="#1B3F66"/>
+<rect x="196" y="124" width="6" height="126" fill="#2B5A8E"/>
+<rect x="180" y="112" width="60" height="16" rx="3" fill="#2B5A8E"/>
+<rect x="206" y="64" width="8" height="48" fill="#8FB3CC"/>
+<circle cx="210" cy="50" r="40" fill="none" stroke="#8FB3CC" stroke-width="8"/>
+<circle cx="210" cy="50" r="9" fill="#8FB3CC"/>
+<path d="M210 10v80M170 50h80M182 22l56 56M238 22l-56 56" stroke="#8FB3CC" stroke-width="5" stroke-linecap="round"/>
+<g class="gota"><path d="M330 308c0 0-13 17-13 26a13 13 0 0 0 26 0c0-9-13-26-13-26z" fill="#14A6C9"/></g>
+</svg>
+</div>
+</div>
+
+<section class="servicios">
+<div class="cont">
+<h2>Qué arreglamos</h2>
+<p class="intro">Precios de referencia. El valor final te lo confirmamos antes de empezar.</p>
+<div>
+<div class="fila"><h3>Fugas de agua</h3><p>Detectamos y reparamos filtraciones en cañerías, llaves y uniones.</p><span class="precio">desde $20.000</span></div>
+<div class="fila"><h3>Destapes</h3><p>WC, lavaplatos, duchas y cañerías tapadas.</p><span class="precio">desde $25.000</span></div>
+<div class="fila"><h3>Calefont y termo</h3><p>Instalación, revisión y reparación de calefont y termo eléctrico.</p><span class="precio">desde $30.000</span></div>
+<div class="fila"><h3>Griferías y artefactos</h3><p>Cambio de llaves, WC, lavamanos y lavaplatos.</p><span class="precio">desde $18.000</span></div>
+<div class="fila"><h3>Lavadoras y lavavajillas</h3><p>Conexión de agua y desagüe, sin filtraciones.</p><span class="precio">desde $20.000</span></div>
+</div>
+<p class="nota">Si no encuentras tu problema, escríbenos igual y te decimos si lo podemos resolver.</p>
+</div>
+</section>
+
+<section>
+<div class="cont">
+<h2>Cómo funciona</h2>
+<p class="intro">Sin visitas sorpresa ni cobros que aparecen al final.</p>
+<ol class="pasos">
+<li data-n="1"><h3>Nos cuentas qué pasa</h3><p>Por WhatsApp o llamada. Si puedes, mándanos una foto.</p></li>
+<li data-n="2"><h3>Te decimos el precio</h3><p>Con la información que nos das, te damos un valor claro antes de salir.</p></li>
+<li data-n="3"><h3>Llegamos y lo dejamos funcionando</h3><p>Trabajamos limpio, probamos que todo quede bien y te entregamos garantía.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="opiniones">
+<div class="cont">
+<h2>Vecinos que nos llamaron</h2>
+<div class="citas">
+<blockquote><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Llegaron en menos de una hora y la fuga quedó resuelta ese mismo día.</p><footer>María, Tu Comuna</footer></blockquote>
+<blockquote><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Me dijeron el precio por WhatsApp y cobraron justo eso.</p><footer>Carlos, Comuna Vecina</footer></blockquote>
+<blockquote><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Instalaron el calefont, dejaron todo limpio y me explicaron cómo usarlo.</p><footer>Andrea, Tu Comuna</footer></blockquote>
+</div>
+</div>
+</section>
+
+<section class="zonas">
+<div class="cont">
+<h2>Dónde trabajamos</h2>
+<p class="intro">Vamos a tu casa, departamento o local en estas comunas.</p>
+<ul>
+<li>Tu Comuna</li>
+<li>Comuna Vecina 1</li>
+<li>Comuna Vecina 2</li>
+<li>Comuna Vecina 3</li>
+</ul>
+</div>
+</section>
+
+<section class="faq">
+<div class="cont">
+<h2>Preguntas frecuentes</h2>
+<p class="intro">Lo que más nos preguntan antes de llamar.</p>
+<details><summary>¿Cuánto demoran en llegar?</summary><p>En urgencias, normalmente en menos de una hora dentro de nuestras comunas. Para trabajos programados, coordinamos el día y la hora que te acomode.</p></details>
+<details><summary>¿Cobran por la visita?</summary><p>Te damos el precio antes de ir. Si lo aceptas, ese es el valor del trabajo, sin sorpresas.</p></details>
+<details><summary>¿Los trabajos tienen garantía?</summary><p>Sí. Todos los trabajos incluyen garantía por escrito sobre lo que reparamos o instalamos.</p></details>
+<details><summary>¿Cómo puedo pagar?</summary><p>Transferencia, efectivo o tarjeta. Si necesitas boleta o factura, avísanos al pedir la cotización.</p></details>
+</div>
+</section>
+
+<section class="final">
+<div class="cont">
+<div>
+<h2>¿Tienes una urgencia ahora?</h2>
+<p>Escríbenos y te respondemos al tiro.</p>
+</div>
+<a class="btn wsp" href="https://wa.me/56912345678?text=Hola,%20necesito%20un%20gasfiter">Escríbenos por WhatsApp</a>
+</div>
+</section>
+</main>
+
+<footer class="pie">
+<div class="cont">
+<strong>Gasfitería Rápida</strong>
+<span>Gasfíter a domicilio en Tu Comuna y alrededores</span>
+<span>+56 9 1234 5678</span>
+</div>
+</footer>
+
+<div class="barra">
+<a class="b1" href="https://wa.me/56912345678?text=Hola,%20necesito%20un%20gasfiter">WhatsApp</a>
+<a class="b2" href="tel:+56912345678">Llamar</a>
+</div>
+
+</body>
+</html>
